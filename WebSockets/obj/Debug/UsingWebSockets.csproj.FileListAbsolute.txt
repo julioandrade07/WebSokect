@@ -1,0 +1,17 @@
+C:\Users\wahlind\Dropbox\Chapter 6 ASP.net - Web sockets\WebSockets\bin\WebSockets.dll
+C:\Users\wahlind\Dropbox\Chapter 6 ASP.net - Web sockets\WebSockets\bin\WebSockets.pdb
+C:\Users\wahlind\Dropbox\Chapter 6 ASP.net - Web sockets\WebSockets\bin\Microsoft.WebSockets.dll
+C:\Users\wahlind\Dropbox\Chapter 6 ASP.net - Web sockets\WebSockets\obj\Debug\WebSockets.dll
+C:\Users\wahlind\Dropbox\Chapter 6 ASP.net - Web sockets\WebSockets\obj\Debug\WebSockets.pdb
+\\Wahlind-i7\d\Wahlin Group\Courses\PluralSight\ASP.NET 4.5\Module3\Code\Before\UsingWebSockets\WebSockets\bin\WebSockets.dll
+\\Wahlind-i7\d\Wahlin Group\Courses\PluralSight\ASP.NET 4.5\Module3\Code\Before\UsingWebSockets\WebSockets\bin\WebSockets.pdb
+\\Wahlind-i7\d\Wahlin Group\Courses\PluralSight\ASP.NET 4.5\Module3\Code\Before\UsingWebSockets\WebSockets\obj\Debug\UsingWebSockets.csprojResolveAssemblyReference.cache
+\\Wahlind-i7\d\Wahlin Group\Courses\PluralSight\ASP.NET 4.5\Module3\Code\Before\UsingWebSockets\WebSockets\obj\Debug\WebSockets.dll
+\\Wahlind-i7\d\Wahlin Group\Courses\PluralSight\ASP.NET 4.5\Module3\Code\Before\UsingWebSockets\WebSockets\obj\Debug\WebSockets.pdb
+\\Wahlind-i7\d\Wahlin Group\Courses\PluralSight\ASP.NET 4.5\Module3\Code\Before\UsingWebSockets\WebSockets\bin\Microsoft.WebSockets.dll
+C:\Users\Julio Andrade\Downloads\aspnet-webforms45-new-features\materials\html5\Code\Before\UsingWebSockets\WebSockets\bin\WebSockets.dll
+C:\Users\Julio Andrade\Downloads\aspnet-webforms45-new-features\materials\html5\Code\Before\UsingWebSockets\WebSockets\bin\WebSockets.pdb
+C:\Users\Julio Andrade\Downloads\aspnet-webforms45-new-features\materials\html5\Code\Before\UsingWebSockets\WebSockets\bin\Microsoft.WebSockets.dll
+C:\Users\Julio Andrade\Downloads\aspnet-webforms45-new-features\materials\html5\Code\Before\UsingWebSockets\WebSockets\obj\Debug\UsingWebSockets.csprojResolveAssemblyReference.cache
+C:\Users\Julio Andrade\Downloads\aspnet-webforms45-new-features\materials\html5\Code\Before\UsingWebSockets\WebSockets\obj\Debug\WebSockets.dll
+C:\Users\Julio Andrade\Downloads\aspnet-webforms45-new-features\materials\html5\Code\Before\UsingWebSockets\WebSockets\obj\Debug\WebSockets.pdb
