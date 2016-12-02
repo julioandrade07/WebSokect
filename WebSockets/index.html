@@ -1,6 +1,6 @@
 ﻿<!doctype html>
 <head>
-    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jquery-3.1.1.min.js">    </script>
 
     <script type="text/javascript">
         var ws;
@@ -22,80 +22,174 @@
                 
             });
         }
-
-        function createSpan(text) {
-            var span = document.createElement('span');
-            span.innerHTML = text + '<br />';
-            return span;
-        }
         
-
         window.onload = function () {
 
-            $('#send').hide();
-
-            $('#close').hide();
 
             $("#enviar").click(function () {
                 
-                var nome = $("#message").val();
+                var nome = $("#userName").val();
                 if (isEmpty(nome)) {
 
                     alert("Digite um nome de usuario para Entrar !!! :) ");
 
                 } else {
-
+                    $(".logout-background").fadeOut();
+                    $(".logout").fadeOut();
+                    
                     wireEvents();
 
-                    $('#send').show();
-
-                    $('#close').show();
-
-                    $('#enviar').hide();
-
                     $('#message').val("");
-
-                    var conversation = $('#conversation');
+                    document.getElementById("message").disabled = true;
+                    var conversation = $('#mensagens');
+                    conversation.append("Carregando..." + "<br/>");
+                    
                     var url = 'ws://localhost:5707/WebSocketsServer2.ashx?chatName=' + nome;
 
                     ws = new WebSocket(url);
-
+                    
                     ws.onerror = function (e) {
                         conversation.append(createSpan('Problem with connection: ' + e.message));
                     };
 
                     ws.onopen = function () {
                         //conversation.innerHTML = 'Client connected <br/>';
+                        document.getElementById("message").disabled = false;
                     };
 
                     ws.onmessage = function (e) {
-                        conversation.append(createSpan(e.data));
+                        var now = new Date();
+                        conversation.append("<b>[" + now.getDate() + "/" + (now.getMonth() + 1) + "/" + now.getFullYear() + " | " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() + "]</b>  " + e.data + "<br/>");
+                        $('#message').val("");
                     };
 
                     ws.onclose = function () {
-                        conversation.innerHTML = 'Closed connection!';
+                        conversation.append('Closed connection!');
+                        document.getElementById("message").disabled = true;
                     };
 
 
                 }
 
             });
-            
-          
+
         };
-        
+
+
+        function OnEnter(evt) {
+            var key_code = evt.keyCode ? evt.keyCode :
+                               evt.charCode ? evt.charCode :
+                               evt.which ? evt.which : void 0;
+
+
+            if (key_code == 13) {
+                return true;
+            }
+        }
+        function usuario(e) {
+            if (OnEnter(e)) {
+                $("#enviar").click();
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function enviarMensagem(e) {
+            if (OnEnter(e)) {
+                $("#send").click();
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function aumentarFonte() {
+            var size = $("#mensagens").css('font-size');
+            size = size.replace('px', '');
+            
+            if (size < 30) {
+                size = parseInt(size) + 2;
+                $("#mensagens").animate({ 'font-size': size + 'px' });
+            } else {
+                alert("Não é possível aumentar mais, o tamanho da fonte já está no limite!!");
+            }
+        }
+
+        function diminuirFonte() {
+            var size = $("#mensagens").css('font-size');
+            size = size.replace('px', '');
+            if (size > 10) {
+                size = parseInt(size) - 2;
+            } else {
+                alert("Não é possível diminuir mais, o tamanho da fonte já está no limite!!");
+            }
+            $("#mensagens").animate({ 'font-size': size + 'px' });
+        }
+
+        function resetarFonte() {
+            $("#mensagens").animate({ 'font-size': '14px' });
+        }
     </script>
-    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <style>
+        *{
+	        box-sizing: border-box;
+	        font-family: 'Raleway', sans-serif;
+        }
+        body{
+            background-color: #E6E6FA;
+
+        }
+        #mensagens{
+            background-color: #4F4F4F;
+            color: white;
+            font-size: 14px;
+            padding: 15px;
+        }
+        .logout{position: absolute;top: 150px;left: 400px;width: 500px;height: 200px;background: #fff;border-radius: 5px; z-index: 999;}
+        .logout-info{clear: both;}
+        .logout-background{background-color: rgba(0,0,0,0.7);width: 100%;height: 100%;position: fixed;left: 0;top: 0; z-index: 999;}
+        .logout-msg{margin-top: 30px;}
+        .btn:hover {background-color: #1874CD;}
+        .logout-btn {text-align: center;border: 2px solid transparent;background: #3498DB;color: #FFF;font-size: 16px;line-height: 25px;padding: 5px 0;text-decoration: none;text-shadow: none;border-radius: 3px;box-shadow: none;transition: 0.25s;display: block;}
+        input {text-align: center;background-color: #ECF0F1;border: 2px solid transparent;border-radius: 3px;transition: border .5s;}
+        input:focus {border: 2px solid #3498DB;box-shadow: none;}
+        .btn-entrar{width: 100px; margin-top: 30px;}
+        .btn-enviar{width: 100px; float: right;margin-right: 10px;}
+        .btn-close{width: 200px; float: right; margin-right: 120px;}
+       .caixaTexto{width: 300px;padding: 10px 0; font-size: 16px;}
+       .btn-aDOWN{position: fixed; top: 180px; left: 920px; width: 35px;}
+       .btn-aUP{position: fixed; top: 100px; left: 920px;width: 35px;}
+        .btn-a {position: fixed; top: 140px; left: 920px;width: 35px;}
+    </style>
 
 </head>
 <body>
-    <h1>Chat Sistemas Distribuídos</h1>
-   
-    <input id="message" /> 
-    <input type="button" id ="enviar" value="Iniciar"/>
-    <input id="send" type="button" value="Send" />
-    <input id="close" type="button" value="Close Connection" />
-    <br />
-    <div id="conversation"></div>
+    <div class="logout-background">
+        <div class="logout">
+            <div class="user-info">
+                <center>
+                    <p class="logout-msg">Digite o nome do usuário: </p>
+                    <input type="text" id="userName" class="caixaTexto" onkeypress="return usuario(event);"/>
+                    <input type="button" id="enviar" class="btn logout-btn btn-entrar" value="Entrar"/>
+                </center>
+            </div>
+        </div>
+     </div>
+        <h1>Chat Sistemas Distribuídos</h1>
+
+        <div id="mensagens" style="height: 400px; width: 900px;overflow-y: scroll; border-style: solid; border-width: 1px;"></div>
+        <br />
+        <textarea id="message" rows="5" style="width: 900px;" onkeypress="return enviarMensagem(event);"></textarea>
+        
+        
+        <input id="close" type="button" class="btn logout-btn btn-close" value="Close Connection" />
+        <input id="send" type="button" class="btn logout-btn btn-enviar" value="Send" />
+        <br />
+        <input type="button" value="A+" class="btn logout-btn btn-aUP" onclick="aumentarFonte();"/>
+        <input type="button" value="A-" class="btn logout-btn btn-aDOWN" onclick="diminuirFonte();" />
+        <input type="button" value="A" class="btn logout-btn btn-a" onclick="resetarFonte();" />
+        <div id="conversation"></div>
 </body>
 </html>

@@ -15,3 +15,17 @@ C:\Users\Julio Andrade\Downloads\aspnet-webforms45-new-features\materials\html5\
 C:\Users\Julio Andrade\Downloads\aspnet-webforms45-new-features\materials\html5\Code\Before\UsingWebSockets\WebSockets\obj\Debug\UsingWebSockets.csprojResolveAssemblyReference.cache
 C:\Users\Julio Andrade\Downloads\aspnet-webforms45-new-features\materials\html5\Code\Before\UsingWebSockets\WebSockets\obj\Debug\WebSockets.dll
 C:\Users\Julio Andrade\Downloads\aspnet-webforms45-new-features\materials\html5\Code\Before\UsingWebSockets\WebSockets\obj\Debug\WebSockets.pdb
+E:\WebSokect-master\WebSockets\obj\Debug\UsingWebSockets.csprojResolveAssemblyReference.cache
+E:\WebSokect-master\WebSockets\bin\WebSockets.dll.config
+E:\WebSokect-master\WebSockets\bin\WebSockets.dll
+E:\WebSokect-master\WebSockets\bin\WebSockets.pdb
+E:\WebSokect-master\WebSockets\bin\Microsoft.WebSockets.dll
+E:\WebSokect-master\WebSockets\obj\Debug\WebSockets.dll
+E:\WebSokect-master\WebSockets\obj\Debug\WebSockets.pdb
+C:\Vitor\WebSokect-master\WebSockets\bin\WebSockets.dll.config
+C:\Vitor\WebSokect-master\WebSockets\bin\WebSockets.dll
+C:\Vitor\WebSokect-master\WebSockets\bin\WebSockets.pdb
+C:\Vitor\WebSokect-master\WebSockets\bin\Microsoft.WebSockets.dll
+C:\Vitor\WebSokect-master\WebSockets\obj\Debug\UsingWebSockets.csprojResolveAssemblyReference.cache
+C:\Vitor\WebSokect-master\WebSockets\obj\Debug\WebSockets.dll
+C:\Vitor\WebSokect-master\WebSockets\obj\Debug\WebSockets.pdb

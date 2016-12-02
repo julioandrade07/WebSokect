@@ -16,13 +16,14 @@ namespace UsingWebSockets
             name = this.WebSocketContext.QueryString["chatName"];
             clients.Add(this);
             clients.Broadcast(name + " entrou na sala.");
+            
         }
         
         public override void OnMessage(string message)
         {
 
             //clients.FirstOrDefault(x =>x.);
-            clients.Broadcast(string.Format("{0} disse: {1}", name, message));
+            clients.Broadcast(string.Format("<b>{0}</b>:<br/> {1}", name, message));
         }
         
         public override void OnClose()
